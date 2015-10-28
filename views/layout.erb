@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8' />
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AquaRoofing</title>
+    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+   
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map');
+        var mapOptions = {
+          center: new google.maps.LatLng(-37.974, 145.256),
+          
+          zoom: 12,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var myLatLng = {lat: -37.974, lng: 145.256};
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body> 
+   <!-- header -->
+  <div class='container'>
+     <div class='header'>
+         <div class="row">
+             <div class="col-md-4">
+               <h1>AQUA </h1>
+               <h2>QUALITY ROOFING</h2>
+             </div>
+             
+             
+             <div class="col-md-8">
+              <nav class="navbar navbar-default" role="navigation">
+                    <div class="container">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                             <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                           <ul class="nav nav-pills">
+                             <li class="active"><a href="index">&nbsp;&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;&nbsp;  </a></li>
+                             <li><a href="about">About Us</a></li>
+                             <li><a href="services">Services</a></li>
+                             <li><a href="contact">Contact Us</a></li>
+                           </ul>
+                        </div>
+                        
+                     
+                  </div> <!--end container-->
+               
+              </nav>        
+                  <h3>roofqualityplus@gmail.com</h3>
+                  <br/>
+                  <h2>0413 158 027</h2>
+              
+             </div><!--end col-md-8-->
+         </div><!--end row-->
+      </div><!--end header-->
+   </div> <!--end container-->
+     <%=yield%>
+  <!--footer-->
+      <div class="container">
+          <div class="footer">
+              <div >
+                  <a class="btn btn-lg" href="index">Home</a>
+                  <a class="btn btn-lg" href="about">About Us</a>
+                  <a class="btn btn-lg" href="services">Services</a>
+                  <a class="btn btn-lg" href="contact">Contact Us</a>
+              </div>
+              <div>  
+                    <a class="btn btn-social-icon btn-twitter">
+                         <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-social-icon btn-facebook">
+                         <i class="fa fa-facebook"></i>
+                    </a>
+                     <a class="btn btn-social-icon btn-linkedin">
+                         <i class="fa fa-linkedin"></i>
+                    </a>
+             </div>         
+             
+          </div>
+      </div>
+  <script src="vendor/jquery-1.9.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    //Stack menu when collapsed
+$('#bs-example-navbar-collapse-1').on('show.bs.collapse', function() {
+    $('.nav-pills').addClass('nav-stacked');
+});
+
+//Unstack menu when not collapsed
+$('#bs-example-navbar-collapse-1').on('hide.bs.collapse', function() {
+    $('.nav-pills').removeClass('nav-stacked');
+});
+  </script>
+
+  
+  </body>
+</html>
